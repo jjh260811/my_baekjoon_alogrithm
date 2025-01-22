@@ -17,7 +17,8 @@ public class BaekJoon1074 {
         int r = Integer.parseInt(st.nextToken());
         int c = Integer.parseInt(st.nextToken());
         int size = (int)Math.pow(2,n);
-        bw.write(find(size,r,c)+"\n");
+        find(size,r,c);
+        bw.write(start+"\n");
         bw.flush();
         bw.close();
         br.close();
@@ -28,10 +29,7 @@ public class BaekJoon1074 {
     public static int find(int size, int r, int c){
         
         if(size<=1){
-            if(r==0&&c==0) return start;
-            else if(r==1&&c==0) return start+1;
-            else if(r==0&&c==1) return start+2;
-            else return start+3;
+            return 0;
         }
         int howLong = size/2;
         if(r<howLong&&c<howLong){
